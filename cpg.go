@@ -32,7 +32,6 @@ int _cpg_local_get(unsigned long int, unsigned int *);
 */
 import "C"
 
-import "fmt"
 import "os"
 import "unsafe"
 
