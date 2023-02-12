@@ -111,8 +111,8 @@ func confchg(handle uint64, value *C.char, length C.int,
 	name := C.GoBytes(unsafe.Pointer(value), length)
 
 	m := (*[1 << 30]C.cpg_address_s)(unsafe.Pointer(member_list))[0:member_list_entries]
-	j := (*[1 << 30]C.cpg_address_s)(unsafe.Pointer(left_list))[0:left_list_entries]
-	l := (*[1 << 30]C.cpg_address_s)(unsafe.Pointer(joined_list))[0:joined_list_entries]
+	l := (*[1 << 30]C.cpg_address_s)(unsafe.Pointer(left_list))[0:left_list_entries]
+	j := (*[1 << 30]C.cpg_address_s)(unsafe.Pointer(joined_list))[0:joined_list_entries]
 
 	callbacks[handle].c(handle, name, mapa2A(m), mapa2A(l), mapa2A(j))
 }
